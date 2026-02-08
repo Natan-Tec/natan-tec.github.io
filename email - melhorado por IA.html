@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado - Asas do Amanhã</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --primary: #45789f;
+            --secondary: #6d89ff;
+            --dark: #1e1e1e;
+            --bg: #f0f1f5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .certificate-card {
+            background: var(--white);
+            width: 100%;
+            max-width: 600px;
+            border-radius: 28px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .header-accent {
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .logo-container img {
+            width: 100px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 12px;
+            letter-spacing: 5px;
+            color: var(--secondary);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark);
+            margin: 0 0 25px 0;
+            line-height: 1.2;
+        }
+
+        .message {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+            border-bottom: 2px solid #e0e7ff;
+        }
+
+        .btn-certificate {
+            display: inline-block;
+            background: var(--dark);
+            color: var(--white);
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-certificate:hover {
+            transform: scale(1.05);
+            background: var(--primary);
+            box-shadow: 0 15px 30px rgba(69, 120, 159, 0.4);
+        }
+
+        .footer {
+            background: #fcfcfc;
+            padding: 30px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .signature-title {
+            font-size: 13px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificate-card" id="card">
+        <div class="header-accent"></div>
+        
+        <div class="content">
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/3125/3125713.png" alt="Logo ADA">
+            </div>
+            
+            <h1>Nota Oficial</h1>
+            <h2>Parabéns, Sr. Samuel!</h2>
+            
+            <p class="message">
+                A <span class="highlight">Academia Aeronáutica Asas do Amanhã</span> tem a honra de informar sua aprovação no teste de piloto de monomotores, com excelência na operação da aeronave <span class="highlight">Cessna C172SP</span>.
+            </p>
+
+            <a href="https://www.canva.com/design/DAHAsScDfUs/0UhYUVrIboJ5zDqSdgW8Ug/edit" class="btn-certificate" target="_blank">
+                Visualizar Certificado Digital
+            </a>
+        </div>
+
+        <div class="footer">
+            <span class="signature-name">Natan Gabriel</span>
+            <span class="signature-title">Diretor Chefe • ADA</span>
+            <div class="copyright">© 2026 Academia Asas do Amanhã. Todos os direitos reservados.</div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const card = document.getElementById('card');
+            
+            // Trigger da animação
+            setTimeout(() => {
+                card.style.transition = 'all 1s cubic-bezier(0.22, 1, 0.36, 1)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
